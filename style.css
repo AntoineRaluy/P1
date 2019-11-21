@@ -494,3 +494,9 @@ header {
     top: 3px;
     border-bottom: none;
 }
+
+@media all and (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+}
