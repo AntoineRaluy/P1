@@ -91,15 +91,15 @@ h2, .slogan h1 {
 
   /* ----- Misc. Rules ----- */
 
-/* #home, #services, #portfolio, #contact {
-    height:100vh;
-} */
+#home, #services, #portfolio, #contact {
+    min-height: var(--section-height);
+}
 
-#services-top, #portfolio-top, #contact-top {
-    position: absolute;
-    margin-top: calc(-1 * var(--header-height));
+#home-top, #services-top, #portfolio-top, #contact-top {
+    display: block;
+    position: relative;
+    top: calc(-1 * var(--header-height));
     visibility: hidden;
-    z-index: -1;
 }
   
 img, iframe {
@@ -154,14 +154,11 @@ header {
 }
 
 
-  /* ----- S1 - Homepage ----- */
+  /* ----- S1 - Homepage ----- */ 
 
-#home {
-    padding-top: var(--header-height);
-}
- 
 .slider-text {
     position: relative;
+    margin-top: var(--header-height);
 }
 
 .slogan {
@@ -395,9 +392,14 @@ header {
     margin: 0 auto;
 }
 
+.projects .projectpic {
+    height: 100%;
+}
+
 .projects figure {
     position: relative;
     width: 300px;
+    height: 100%;
     padding: 1.5rem 0;
     margin: 0 1rem;
     }
