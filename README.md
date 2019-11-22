@@ -1,2 +1,3 @@
-# P1
-Projet 1 OpenClassrooms. Integration maquette HTML5 CSS3.
+# P1: WebAgency
+
+OpenClassrooms - Projet 1 : Intégration d'une maquette en HTML5/CSS3.
