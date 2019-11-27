@@ -5,7 +5,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width">
     <title>WebAgency : L'agence de tous vos projets ! </title>
-    <meta name="description" content="WebAgency à Paris. WebAgency est une agence spécialisée dans la conception de sites internet aux designs modernes et optimisés pour le référencement.">
+    <meta name="description"
+        content="WebAgency à Paris. WebAgency est une agence spécialisée dans la conception de sites internet aux designs modernes et optimisés pour le référencement.">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
     <link rel="stylesheet" href="style.css" />
@@ -17,12 +18,15 @@
     <header>
         <img class="logo" src="/P1/images/logo.png" alt="WebAgency Logo">
         <nav class="menu">
-            <ul>
-                <li><a href="#home-top">Accueil</a></li>
-                <li><a href="#services-top">Services</a></li>
-                <li><a href="#portfolio-top">Portfolio</a></li>
-                <li><a href="#contact-top">Contact</a></li>
-            </ul>
+
+            <input type="radio" name="header-menu" id="menu-home" checked="checked">
+            <label for="menu-home" onclick="location.href=('#home-top')">Accueil</label>
+            <input type="radio" name="header-menu" id="menu-services">
+            <label for="menu-services" onclick="location.href=('#services-top')">Services</label>
+            <input type="radio" name="header-menu" id="menu-portfolio">
+            <label for="menu-portfolio" onclick="location.href=('#portfolio-top')">Portfolio</label>
+            <input type="radio" name="header-menu" id="menu-contact">
+            <label for="menu-contact" onclick="location.href=('#contact-top')">Contact</label>
         </nav>
     </header>
 
@@ -38,17 +42,17 @@
                 <p class="catchphrase">Vous avez un projet web ? La WebAgency vous aide à le réaliser !</p>
                 <p><a href="#services-top">Plus d'infos</a></p>
             </div>
-            
+
             <div class="slider-commands">
-        <i class="fas fa-chevron-left"></i>
-        <i class="fas fa-chevron-right"></i>
-    </div>
+                <i class="fas fa-chevron-left"></i>
+                <i class="fas fa-chevron-right"></i>
+            </div>
             <div class="edge-border"></div>
             <div class="edge-border-blue"></div>
         </div>
     </section>
 
-    
+
 
     <!-- Section 2 - Nos Services -->
     <div id="services-top"></div>
@@ -60,34 +64,37 @@
         <p class="sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
             labore et dolore magna aliqua. Ut enim ad minim veniam</p>
         <div class="serv-body">
-        <img class="services-bg" src="/P1/images/main-feature.png" alt="Computer Screen">
-        <div class="serv-section">
-        <div class="serv-details"> 
-        <p class="icon"><i class="fas fa-chart-line"><i class="fas fa-circle"></i></i></p>
-        <div class="serv-text">
-        <h3>UX design</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua. </p>
+            <img class="services-bg" src="/P1/images/main-feature.png" alt="Computer Screen">
+            <div class="serv-section">
+                <div class="serv-details">
+                    <p class="icon"><i class="fas fa-chart-line"><i class="fas fa-circle"></i></i></p>
+                    <div class="serv-text">
+                        <h3>UX design</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore
+                            magna aliqua. </p>
+                    </div>
+                </div>
+                <div class="serv-details">
+                    <p class="icon"><i class="fas fa-cubes"></i><i class="fas fa-circle"></i></p>
+                    <div class="serv-text">
+                        <h3>UI design</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore
+                            magna aliqua. </p>
+                    </div>
+                </div>
+                <div class="serv-details">
+                    <p class="icon"><i class="fas fa-chart-pie"></i><i class="fas fa-circle"></i></p>
+                    <div class="serv-text">
+                        <h3>SEO</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore
+                            magna aliqua. </p>
+                    </div>
+                </div>
+            </div>
         </div>
-        </div>  
-        <div class="serv-details">
-        <p class="icon"><i class="fas fa-cubes"></i><i class="fas fa-circle"></i></p>
-        <div class="serv-text">
-        <h3>UI design</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua. </p>
-        </div>
-        </div>
-        <div class="serv-details"> 
-        <p class="icon"><i class="fas fa-chart-pie"></i><i class="fas fa-circle"></i></p>
-        <div class="serv-text">
-        <h3>SEO</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua. </p>
-        </div>
-    </div>
-    </div>
-</div>
     </section>
 
 
@@ -101,55 +108,67 @@
         <p class="sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
             labore et dolore magna aliqua. Ut enim ad minim veniam</p>
 
-        <nav class="projectsmenu">
-            <ul>
-                <li><a class="left" href="#portfolio-top">All Works</a></li><li><a href="#portfolio-top">Creative</a></li><li><a href="#portfolio-top">Corporate</a></li><li><a class="right" href="#portfolio-top">Portfolio</a></li>
-            </ul>
-        </nav>
+        <input type="radio" id="all-proj" name="portfolio-menu" value="all-proj" checked>
+        <input type="radio" id="crea-proj" name="portfolio-menu" value="crea-proj">
+        <input type="radio" id="corp-proj" name="portfolio-menu" value="corp-proj">
+        <input type="radio" id="port-proj" name="portfolio-menu" value="port-proj">
 
-        <div class="projects">
-            <figure>
-                <img class="projectpic" src="images/portfolio/01.jpg" alt="">
-                <figcaption><i class="far fa-eye"></i><strong>Item 1</strong> <br> Lorem ipsum</figcaption>
-            </figure>
 
-            <figure>
-                <img class="projectpic" src="images/portfolio/02.jpg" alt="">
-                <figcaption><i class="far fa-eye"></i><strong>Item 2</strong> <br> Lorem ipsum</figcaption>
-            </figure>
-
-            <figure>
-                <img class="projectpic" src="images/portfolio/03.jpg" alt="">
-                <figcaption><i class="far fa-eye"></i><strong>Item 3</strong> <br> Lorem ipsum</figcaption>
-            </figure>
-
-            <figure>
-                <img class="projectpic" src="images/portfolio/04.jpg" alt="">
-                <figcaption><i class="far fa-eye"></i><strong>Item 4</strong> <br> Lorem ipsum</figcaption>
-            </figure>
-
-            <figure>
-                <img class="projectpic" src="images/portfolio/05.jpg" alt="">
-                <figcaption><i class="far fa-eye"></i><strong>Item 5</strong> <br> Lorem ipsum</figcaption>
-            </figure>
-
-            <figure>
-                <img class="projectpic" src="images/portfolio/06.jpg" alt="">
-                <figcaption><i class="far fa-eye"></i><strong>Item 6</strong> <br> Lorem ipsum</figcaption>
-            </figure>
-
-            <figure>
-                <img class="projectpic" src="images/portfolio/07.jpg" alt="">
-                <figcaption><i class="far fa-eye"></i><strong>Item 7</strong> <br> Lorem ipsum</figcaption>
-            </figure>
-
-            <figure>
-                <img class="projectpic" src="images/portfolio/08.jpg" alt="">
-                <figcaption><i class="far fa-eye"></i><strong>Item 8</strong> <br> Lorem ipsum</figcaption>
-            </figure>
-
-        </div>
-
+        <ol class="filters">
+            <li><label for="all-proj"  class="left">All Works</label></li><li><label for="crea-proj">Creative</label></li><li><label for="corp-proj">Corporate</label></li><li><label for="port-proj"  class="right">Portfolio</label>
+            </li>
+        </ol>
+        
+        <ol class="posts">
+            <li class="post" data-category="corp-proj">
+                <figure>
+                    <img class="projectpic" src="images/portfolio/01.jpg" alt="">
+                    <figcaption><i class="far fa-eye"></i><strong>Item 1</strong> <br> Lorem ipsum</figcaption>
+                </figure>
+            </li>
+            <li class="post" data-category="crea-proj">
+                <figure>
+                    <img class="projectpic" src="images/portfolio/02.jpg" alt="">
+                    <figcaption><i class="far fa-eye"></i><strong>Item 2</strong> <br> Lorem ipsum</figcaption>
+                </figure>
+            </li>
+            <li class="post" data-category="port-proj">
+                <figure>
+                    <img class="projectpic" src="images/portfolio/03.jpg" alt="">
+                    <figcaption><i class="far fa-eye"></i><strong>Item 3</strong> <br> Lorem ipsum</figcaption>
+                </figure>
+            </li>
+            <li class="post" data-category="crea-proj corp-proj">
+                <figure>
+                    <img class="projectpic" src="images/portfolio/04.jpg" alt="">
+                    <figcaption><i class="far fa-eye"></i><strong>Item 4</strong> <br> Lorem ipsum</figcaption>
+                </figure>
+            </li>
+            <li class="post" data-category="crea-proj port-proj">
+                <figure>
+                    <img class="projectpic" src="images/portfolio/05.jpg" alt="">
+                    <figcaption><i class="far fa-eye"></i><strong>Item 5</strong> <br> Lorem ipsum</figcaption>
+                </figure>
+            </li>
+            <li class="post" data-category="crea-proj port-proj">
+                <figure>
+                    <img class="projectpic" src="images/portfolio/06.jpg" alt="">
+                    <figcaption><i class="far fa-eye"></i><strong>Item 6</strong> <br> Lorem ipsum</figcaption>
+                </figure>
+            </li>
+            <li class="post" data-category="corp-proj crea-proj">
+                <figure>
+                    <img class="projectpic" src="images/portfolio/07.jpg" alt="">
+                    <figcaption><i class="far fa-eye"></i><strong>Item 7</strong> <br> Lorem ipsum</figcaption>
+                </figure>
+            </li>
+            <li class="post" data-category="port-proj">
+                <figure data-projects="all-projects portfolio-projects">
+                    <img class="projectpic" src="images/portfolio/08.jpg" alt="">
+                    <figcaption><i class="far fa-eye"></i><strong>Item 8</strong> <br> Lorem ipsum</figcaption>
+                </figure>
+            </li>
+        </ol>
     </section>
 
 

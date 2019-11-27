@@ -134,25 +134,24 @@ header {
     min-height: 30px;
 }
 
-.menu li {
+.menu {
     display: inline;
-    padding: 0 1rem;
 }
 
-.menu li:hover {
+.menu input[type="radio"] {
+    display: none;
+}
+
+.menu label {
+    padding: 0 1rem;
+  }
+
+.menu label:hover, .menu input[type="radio"]:checked + label {
     padding-top: 3.5rem;
     border-top: solid 3px var(--main-blue);
-}
-
-.menu a {
-    color: inherit;
-    text-decoration: none;
-}
-
-.menu a:hover {
+    cursor: pointer;
     color: black;
 }
-
 
   /* ----- S1 - Homepage ----- */ 
 
@@ -260,8 +259,10 @@ header {
 }
 
 .subdot {
+    position: relative;
     text-align: center;
     padding-bottom: 1.5rem;
+    z-index: 1;
 }
 
 .subdot .fa-circle {
@@ -294,6 +295,10 @@ header {
     height: 100%;
     margin-left: 16%;
     margin-right: 9%;
+}
+
+.serv-section {
+    padding-top: 5rem;
 }
 
 .serv-details {
@@ -340,40 +345,45 @@ header {
     padding-bottom: 5rem;
 }
 
-.projectsmenu {
+#portfolio input[type="radio"] {
+    display: none;
+}
+
+.filters {
     text-align: center;
     margin: 5rem 0;
-}
-
-.projectsmenu li {
+  }
+  
+.filters li {
     display: inline;
-}
-
-.projectsmenu .left {
-    border-radius: 3px 0 0 3px;
-}
-
-.projectsmenu .right {
-    border-radius: 0 3px 3px 0; 
-}
-
-.projectsmenu a {
+  }
+  
+.filters label {
     color: inherit;
     text-decoration: none;
     padding: 1.2rem 1.5rem 1rem 1.5rem;
     background: #e5e5e5;
     border-bottom: solid 3px transparent;
+  }
+
+.filters .left {
+    border-radius: 3px 0 0 3px;
 }
 
-.projectsmenu a:hover {
+.filters .right {
+    border-radius: 0 3px 3px 0; 
+}
+  
+.filters label:hover {
     position: relative;
     background: var(--main-blue);
     color: white;
     font-weight: 500;
     border-bottom: solid 3px #468cad;
-}
+    cursor: pointer;
+  }
 
-.projectsmenu a:hover:after {
+.filters label:hover:after {
     content:"";
     position: absolute;
     top: 100%;
@@ -384,44 +394,35 @@ header {
     border-right: solid 10px transparent;
 }
 
-.projects {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: calc(300px * 4 + 1.5rem * 8);
-    justify-content: center;
-    margin: 0 auto;
-}
+  .posts {
+    margin: 0 5%;
+    display: grid;
+    grid-gap: 3rem;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .posts figure {
+      position: relative;
+  }
 
-.projects .projectpic {
-    height: 100%;
-}
-
-.projects figure {
-    position: relative;
-    width: 300px;
-    height: 100%;
-    padding: 1.5rem 0;
-    margin: 0 1rem;
-    }
-
-.projects figcaption {
+ .posts figcaption {
     position: absolute;
     display: none;
     width: 100%;
     height: 33%;
-    bottom: 2.1rem;
+    bottom: 0.6rem;
     left: 0;
     color: white;
     background: rgba(0, 0, 0, 0.5);
     padding: 1rem;
 }
 
-.projects figure:hover figcaption {
+.posts .post:hover figcaption {
     display: block;
     z-index: 2;
 }
 
-.projects .fa-eye {
+.posts .fa-eye {
     position: absolute;
     top: -1.8rem;
     right: 1rem;
@@ -431,7 +432,41 @@ header {
     border: solid 2px white;
     border-radius: 100%;
 }
+  
+  [value="all-proj"]:checked ~ .filters [for="all-proj"],
+  [value="crea-proj"]:checked ~ .filters [for="crea-proj"],
+  [value="corp-proj"]:checked ~ .filters [for="corp-proj"],
+  [value="port-proj"]:checked ~ .filters [for="port-proj"] {
+    position: relative;
+    background: var(--main-blue);
+    color: white;
+    font-weight: 500;
+    border-bottom: solid 3px #468cad;
+  }
 
+  [value="all-proj"]:checked ~ .filters [for="all-proj"]:after,
+  [value="crea-proj"]:checked ~ .filters [for="crea-proj"]:after,
+  [value="corp-proj"]:checked ~ .filters [for="corp-proj"]:after,
+  [value="port-proj"]:checked ~ .filters [for="port-proj"]:after  {
+    content:"";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-top: solid 10px #468cad;
+    border-left: solid 10px transparent;
+    border-right: solid 10px transparent;
+  }
+  
+  [value="all-proj"]:checked ~ .posts [data-category] {
+    display: block;
+  }
+  
+  [value="crea-proj"]:checked ~ .posts .post:not([data-category~="crea-proj"]),
+  [value="corp-proj"]:checked ~ .posts .post:not([data-category~="corp-proj"]),
+  [value="port-proj"]:checked ~ .posts .post:not([data-category~="port-proj"]) {
+    display: none;
+  }
 
 /* ----- S4 - Contact ----- */
 
