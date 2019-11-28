@@ -155,9 +155,77 @@ header {
 
   /* ----- S1 - Homepage ----- */ 
 
-.slider-text {
+#home input[type="radio"] {
+    display: none;
+}
+
+#slider-text {
     position: relative;
     margin-top: var(--header-height);
+}
+
+#inner-slider {
+    width: 100%;
+    overflow: hidden;
+}
+
+#slider-text .slides-images {
+    width: 500%;
+    transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+}
+
+#slider-text article {
+    width: 20%;
+    display: block;
+    float: left;
+}
+
+.slides-images article img {
+    width: 100%;
+}
+
+#slide1:checked ~ #slider-text .slides-images {
+    margin-left: 0;
+}
+
+#slide2:checked ~ #slider-text .slides-images {
+    margin-left: -100%;
+}
+
+#slider-commands {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translate(0, -50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2rem;
+    color: white;
+    z-index: 2;
+}
+
+#slider-commands .fa-chevron-left:hover, #slider-commands .fa-chevron-right:hover {
+    cursor: pointer;
+    color: white;
+}
+
+#slider-commands .fas {
+    height: 70px;
+    width: 35px;
+    background: rgba(0, 0, 0, 0.15)
+}
+
+#slider-commands .fa-chevron-left {
+    border-radius: 0 35px 35px 0;
+    padding: 2.5rem 0 0 0.8rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+#slider-commands .fa-chevron-right {
+    border-radius: 35px 0 0 35px;
+    padding: 2.5rem 0 0 1.4rem;
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .slogan {
@@ -169,6 +237,7 @@ header {
     font-weight: 500;
     line-height: 1;
     color: white;
+    z-index: 2;
 }
 
 .slogan h1 {
@@ -197,34 +266,6 @@ header {
 .slogan a:active {
     top: 3px;
     border-bottom: none;
-}
-
-.slider-commands {
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    transform: translate(0, -50%);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 2rem;
-    color: white;
-}
-
-.slider-commands .fas {
-    height: 70px;
-    width: 35px;
-    background: rgba(0, 0, 0, 0.15)
-}
-
-.slider-commands .fa-chevron-left {
-    border-radius: 0 35px 35px 0;
-    padding: 2.5rem 0 0 0.8rem;
-}
-
-.slider-commands .fa-chevron-right {
-    border-radius: 35px 0 0 35px;
-    padding: 2.5rem 0 0 1.4rem;
 }
 
 .edge-border {
