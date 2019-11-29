@@ -172,7 +172,7 @@ header {
 
 #slider-text .slides-images {
     width: 500%;
-    transition: all 1000ms ease-in-out;
+    transition: all 1500ms ease-in-out;
 }
 
 #slider-text .slides-images div {
@@ -279,30 +279,20 @@ header {
     z-index: 2;
 }
 
-.edge-border-blue {
+.edge-border-blue, .edge-border-blue-rev {
     position: absolute;
     bottom: 6px;
-    height: 4px;
-    background: var(--main-blue);
-    z-index: 3;
-    /* animation: 2s linear 1s progress forwards; */
-}
-
-.edge-border-blue-rev {
-    position: absolute;
-    bottom: 6px;
-    height: 4px;
-    background: var(--main-blue);
-    z-index: 3;
-    /* animation: 2s linear 1s progress-rev forwards; */
+    height: calc(100% + var(--header-height));
+    border-bottom: solid 4px var(--main-blue);
+    z-index: 1;
 }
 
 #bluebar:target {
-    animation: 4s linear 0.5s progress forwards;
+    animation: 2.5s linear progress forwards;
 }
 
 #bluebar-rev:target {
-    animation: 4s linear 0.5s progress-rev forwards;
+    animation: 2.5s linear progress-rev forwards;
 }
 
 @keyframes progress {
