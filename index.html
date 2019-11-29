@@ -7,7 +7,7 @@
     <title>WebAgency : L'agence de tous vos projets ! </title>
     <meta name="description"
         content="WebAgency à Paris. WebAgency est une agence spécialisée dans la conception de sites internet aux designs modernes et optimisés pour le référencement.">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,900&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
     <link rel="stylesheet" href="style.css" />
 </head>
@@ -33,25 +33,25 @@
     <!-- Section 1 - Accueil -->
     <div id="home-top"></div>
     <section id="home">
-            <input type="radio" name="slider" id="slide1" checked="checked">
-            <input type="radio" name="slider" id="slide2">
+        <input type="radio" name="slider" id="slide1" checked="checked">
+        <input type="radio" name="slider" id="slide2">
 
         <div id="slider-text">
             <div id="inner-slider">
-            <div class="slides-images">
-            <article>
-            <img src="/P1/images/slider/bg1.jpg" alt="Young girl smiling with painted hands">
-            </article>
-            <article>
-            <img src="/P1/images/slider/bg2.jpg" alt="Young oy with loudspeaker">
-            </article>
-            </div>
+                <div class="slides-images">
+                    <div>
+                        <img src="/P1/images/slider/bg1.jpg" alt="Young girl smiling with painted hands">
+                    </div>
+                    <div>
+                        <img src="/P1/images/slider/bg2.jpg" alt="Young oy with loudspeaker">
+                    </div>
+                </div>
             </div>
 
             <div id="slider-commands">
-                    <label for="slide1"><i class="fas fa-chevron-left"></i></label>
-                    <label for="slide2"><i class="fas fa-chevron-right"></i></label>
-                </div>
+                <label for="slide1" onclick="location.href=('#bluebar-rev')"><i class="fas fa-chevron-left"></i></label>
+                <label for="slide2" onclick="location.href=('#bluebar')"><i class="fas fa-chevron-right"></i></label>
+            </div>
 
             <div class="slogan">
                 <h1><span>WEBAGENCY</span> : L'agence de tous vos projets ! </h1>
@@ -60,7 +60,8 @@
             </div>
 
             <div class="edge-border"></div>
-            <div class="edge-border-blue"></div>
+            <div class="edge-border-blue" id="bluebar"></div>
+            <div class="edge-border-blue-rev" id="bluebar-rev"></div>
         </div>
     </section>
 
@@ -79,21 +80,24 @@
                     <p class="icon"><i class="fas fa-chart-line"><i class="fas fa-circle"></i></i></p>
                     <div class="serv-text">
                         <h3>UX design</h3>
-                        <p>L'expérience utilisateur est au cœur de nos projets : nos sites sont ergonomiques, intuitifs, et responsive.  </p>
+                        <p>L'expérience utilisateur est au cœur de nos projets : nos sites sont ergonomiques, intuitifs,
+                            et responsive. </p>
                     </div>
                 </div>
                 <div class="serv-details">
                     <p class="icon"><i class="fas fa-cubes"></i><i class="fas fa-circle"></i></p>
                     <div class="serv-text">
                         <h3>UI design</h3>
-                        <p>Nos projets sont réalisés avec une interface moderne et fonctionnelle, reflétant au mieux votre identité.  </p>
+                        <p>Nos projets sont réalisés avec une interface moderne et fonctionnelle, reflétant au mieux
+                            votre identité. </p>
                     </div>
                 </div>
                 <div class="serv-details">
                     <p class="icon"><i class="fas fa-chart-pie"></i><i class="fas fa-circle"></i></p>
                     <div class="serv-text">
                         <h3>SEO</h3>
-                        <p>Confiez-nous votre projet, et bénéficiez d'une visibilité supérieure sur les moteurs de recherche. </p>
+                        <p>Confiez-nous votre projet, et bénéficiez d'une visibilité supérieure sur les moteurs de
+                            recherche. </p>
                     </div>
                 </div>
             </div>
@@ -108,7 +112,7 @@
         <h2>Nos Projets</h2>
         <p class="subdot"><i class="fas fa-circle"></i></p>
 
-        <p class="sub">La WebAgency est leader dans son domaine, et nos clients ne se sont pas trompés.</p>
+        <p class="sub">La WebAgency est leader dans son domaine ; nos clients ne se sont pas trompés.</p>
 
         <input type="radio" id="all-proj" name="portfolio-menu" value="all-proj" checked>
         <input type="radio" id="crea-proj" name="portfolio-menu" value="crea-proj">
@@ -117,56 +121,56 @@
 
 
         <ol class="filters">
-            <li><label for="all-proj"  class="left">All Works</label></li><li><label for="crea-proj">Creative</label></li><li><label for="corp-proj">Corporate</label></li><li><label for="port-proj"  class="right">Portfolio</label>
+            <li><label for="all-proj" class="left">All Works</label></li><li><label for="crea-proj">Creative</label></li><li><label for="corp-proj">Corporate</label></li><li><label for="port-proj" class="right">Portfolio</label>
             </li>
         </ol>
-        
+
         <ol class="posts">
             <li class="post" data-category="corp-proj">
                 <figure>
-                    <img class="projectpic" src="images/portfolio/01.jpg" alt="">
+                    <img src="images/portfolio/01.jpg" alt="">
                     <figcaption><i class="far fa-eye"></i><strong>Item 1</strong> <br> Lorem ipsum</figcaption>
                 </figure>
             </li>
             <li class="post" data-category="crea-proj">
                 <figure>
-                    <img class="projectpic" src="images/portfolio/02.jpg" alt="">
+                    <img src="images/portfolio/02.jpg" alt="">
                     <figcaption><i class="far fa-eye"></i><strong>Item 2</strong> <br> Lorem ipsum</figcaption>
                 </figure>
             </li>
             <li class="post" data-category="port-proj">
                 <figure>
-                    <img class="projectpic" src="images/portfolio/03.jpg" alt="">
+                    <img src="images/portfolio/03.jpg" alt="">
                     <figcaption><i class="far fa-eye"></i><strong>Item 3</strong> <br> Lorem ipsum</figcaption>
                 </figure>
             </li>
             <li class="post" data-category="crea-proj corp-proj">
                 <figure>
-                    <img class="projectpic" src="images/portfolio/04.jpg" alt="">
+                    <img src="images/portfolio/04.jpg" alt="">
                     <figcaption><i class="far fa-eye"></i><strong>Item 4</strong> <br> Lorem ipsum</figcaption>
                 </figure>
             </li>
             <li class="post" data-category="crea-proj port-proj">
                 <figure>
-                    <img class="projectpic" src="images/portfolio/05.jpg" alt="">
+                    <img src="images/portfolio/05.jpg" alt="">
                     <figcaption><i class="far fa-eye"></i><strong>Item 5</strong> <br> Lorem ipsum</figcaption>
                 </figure>
             </li>
             <li class="post" data-category="crea-proj port-proj">
                 <figure>
-                    <img class="projectpic" src="images/portfolio/06.jpg" alt="">
+                    <img src="images/portfolio/06.jpg" alt="">
                     <figcaption><i class="far fa-eye"></i><strong>Item 6</strong> <br> Lorem ipsum</figcaption>
                 </figure>
             </li>
             <li class="post" data-category="corp-proj crea-proj">
                 <figure>
-                    <img class="projectpic" src="images/portfolio/07.jpg" alt="">
+                    <img src="images/portfolio/07.jpg" alt="">
                     <figcaption><i class="far fa-eye"></i><strong>Item 7</strong> <br> Lorem ipsum</figcaption>
                 </figure>
             </li>
             <li class="post" data-category="port-proj">
                 <figure data-projects="all-projects portfolio-projects">
-                    <img class="projectpic" src="images/portfolio/08.jpg" alt="">
+                    <img src="images/portfolio/08.jpg" alt="">
                     <figcaption><i class="far fa-eye"></i><strong>Item 8</strong> <br> Lorem ipsum</figcaption>
                 </figure>
             </li>
@@ -181,9 +185,9 @@
         <div class="contact-info">
             <h3>Contact Info</h3>
             <div class="contact-text">
-            <p><strong>WebAgency SAS</strong> <br>
-                25 Rue d'Hauteville 75010 Paris <br>
-                <abbr title="Téléphone">Tel :</abbr> 01 02 03 04 05</p>
+                <p><strong>WebAgency SAS</strong> <br>
+                    25 Rue d'Hauteville 75010 Paris <br>
+                    <abbr title="Téléphone">Tel :</abbr> 01 02 03 04 05</p>
             </div>
 
             <form class="contact-form" method="post">
