@@ -149,7 +149,7 @@ header {
 
 .menu label:hover, .menu input[type="radio"]:checked + label {
     padding-top: 3.5rem;
-    border-top: solid 3px var(--main-blue);
+    border-top: solid 4px var(--main-blue);
     cursor: pointer;
     color: black;
 }
@@ -357,12 +357,12 @@ header {
 }
 
 .serv-section {
-    padding-top: 5rem;
+    padding-top: 3rem;
 }
 
 .serv-details {
     display: flex;
-    margin: 2rem auto;
+    margin: 3.8rem auto;
     margin-right: 25%;
     max-width: calc((100vw / 2) - 20%);
 }
@@ -373,7 +373,6 @@ header {
 }
 
 .serv-details .fa-chart-line, .serv-details .fa-cubes, .serv-details .fa-chart-pie {
-    
     color: var(--main-blue);
     font-size: 2.8rem;
     padding: 1.7rem;
@@ -395,6 +394,10 @@ header {
 .serv-text {
     text-align: justify;
     margin: 0 3rem;
+}
+
+.serv-text h3 {
+    font-size: 1.8rem;
 }
 
 /* ----- S3 - Portfolio ----- */
@@ -469,12 +472,17 @@ header {
     position: absolute;
     display: none;
     width: 100%;
-    height: 33%;
+    min-height: 33%;
     bottom: 0.6rem;
     left: 0;
     color: white;
     background: rgba(0, 0, 0, 0.5);
     padding: 1rem;
+}
+
+.posts figcaption a {
+    text-decoration: none;
+    color: white;
 }
 
 .posts .post:hover figcaption {
@@ -603,8 +611,10 @@ header {
 }
 
 
+  /* ----- Media Queries ----- */
 
-/* @media all and (max-width: 1150px) {
+
+@media all and (max-width: 1150px) {
     :root {
         --header-height: 8vh;
         --section-height: 43vh;
@@ -654,4 +664,4 @@ header {
         --header-height: 5vh;
         --section-height: 20vh;
     }
-} */
+}
