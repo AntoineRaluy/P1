@@ -15,10 +15,10 @@
 <body>
 
     <!-- Menu Navigation -->
+
     <header>
         <img class="logo" src="/P1/images/logo.png" alt="WebAgency Logo">
         <nav class="menu">
-
             <input type="radio" name="header-menu" id="menu-home" checked="checked">
             <label for="menu-home" onclick="location.href=('#home-top')">Accueil</label>
             <input type="radio" name="header-menu" id="menu-services">
@@ -31,11 +31,11 @@
     </header>
 
     <!-- Section 1 - Accueil -->
+
     <div id="home-top"></div>
     <section id="home">
         <input type="radio" name="slider" id="slide1" checked="checked">
         <input type="radio" name="slider" id="slide2">
-
         <div id="slider-text">
             <div id="inner-slider">
                 <div class="slides-images">
@@ -47,18 +47,15 @@
                     </div>
                 </div>
             </div>
-
             <div id="slider-commands">
                 <label for="slide1" onclick="location.href=('#bluebar-rev')"><i class="fas fa-chevron-left"></i></label>
                 <label for="slide2" onclick="location.href=('#bluebar')"><i class="fas fa-chevron-right"></i></label>
             </div>
-
             <div class="slogan">
                 <h1><span>WEBAGENCY</span> : L'agence de tous vos projets ! </h1>
                 <p class="catchphrase">Vous avez un projet web ? La WebAgency vous aide à le réaliser !</p>
                 <p><a href="#services-top">Plus d'infos</a></p>
             </div>
-
             <div class="edge-border"></div>
             <div class="edge-border-blue" id="bluebar"></div>
             <div class="edge-border-blue-rev" id="bluebar-rev"></div>
@@ -66,12 +63,11 @@
     </section>
 
     <!-- Section 2 - Nos Services -->
+
     <div id="services-top"></div>
     <section id="services">
-
         <h2>Nos Services</h2>
         <p class="subdot"><i class="fas fa-circle"></i></p>
-
         <p class="sub">Tous nos projets sont conçus en respectant trois principes majeurs du Web Development.</p>
         <div class="serv-body">
             <img class="services-bg" src="/P1/images/main-feature.png" alt="Computer Screen">
@@ -104,84 +100,92 @@
         </div>
     </section>
 
-
     <!-- Section 3 - Nos Projets -->
+
     <div id="portfolio-top"></div>
     <section id="portfolio">
-
         <h2>Nos Projets</h2>
         <p class="subdot"><i class="fas fa-circle"></i></p>
-
         <p class="sub">La WebAgency est leader dans son domaine ; nos clients ne se sont pas trompés.</p>
-
         <input type="radio" id="all-proj" name="portfolio-menu" value="all-proj" checked>
         <input type="radio" id="crea-proj" name="portfolio-menu" value="crea-proj">
         <input type="radio" id="corp-proj" name="portfolio-menu" value="corp-proj">
         <input type="radio" id="port-proj" name="portfolio-menu" value="port-proj">
-
-
         <ol class="filters">
             <li><label for="all-proj" class="left">All Works</label></li><li><label for="crea-proj">Creative</label></li><li><label for="corp-proj">Corporate</label></li><li><label for="port-proj" class="right">Portfolio</label>
             </li>
         </ol>
-
-        <ol class="posts">
+        <ol class="projects">
             <li class="post" data-category="corp-proj">
                 <figure>
                     <img src="images/portfolio/01.jpg" alt="">
-                    <figcaption><a href="images/portfolio/01.jpg"><i class="far fa-eye"></i></a><strong>Face Swap</strong> <br>Un site interactif pour affirmer votre style.</figcaption>
+                    <figcaption><a href="#fullfig1"><i class="far fa-eye"></i></a><strong>Face Swap</strong> <br>Un site
+                        interactif pour affirmer votre style.</figcaption>
                 </figure>
             </li>
             <li class="post" data-category="crea-proj">
                 <figure>
                     <img src="images/portfolio/02.jpg" alt="">
-                    <figcaption><i class="far fa-eye"></i><strong>Orig' Ami</strong> <br>Prenez le pli via une interface intuitive.</figcaption>
+                    <figcaption><a href="#fullfig2"><i class="far fa-eye"></i></a><strong>Orig' Ami</strong> <br>Prenez
+                        le pli via une interface intuitive.</figcaption>
                 </figure>
             </li>
             <li class="post" data-category="port-proj">
                 <figure>
                     <img src="images/portfolio/03.jpg" alt="">
-                    <figcaption><i class="far fa-eye"></i><strong>Original Pompadour</strong> <br>Le forum de référence des coiffeurs corréziens.</figcaption>
+                    <figcaption><a href="#fullfig3"><i class="far fa-eye"></i></a><strong>Original Pompadour</strong>
+                        <br>Le forum de référence des coiffeurs corréziens.</figcaption>
                 </figure>
             </li>
             <li class="post" data-category="crea-proj corp-proj">
                 <figure>
                     <img src="images/portfolio/04.jpg" alt="">
-                    <figcaption><i class="far fa-eye"></i><strong>PolyPrint</strong> <br>À chaque situation sa bonne impression.</figcaption>
+                    <figcaption><a href="#fullfig4"><i class="far fa-eye"></i></a><strong>PolyPrint</strong> <br>À chaque situation sa bonne impression.</figcaption>
                 </figure>
             </li>
             <li class="post" data-category="crea-proj port-proj">
                 <figure>
                     <img src="images/portfolio/05.jpg" alt="">
-                    <figcaption><i class="far fa-eye"></i><strong>Blakenwhy</strong> <br>Un e-shop élégant pour une marque de luxe. </figcaption>
+                    <figcaption><a href="#fullfig5"><i class="far fa-eye"></i></a><strong>Blakenwhy</strong> <br>Un
+                        e-shop élégant pour une marque de luxe. </figcaption>
                 </figure>
             </li>
             <li class="post" data-category="crea-proj port-proj">
                 <figure>
                     <img src="images/portfolio/06.jpg" alt="">
-                    <figcaption><i class="far fa-eye"></i><strong>Citizens Of Tomorrow</strong> <br>Entre simulation d'anticipation et plaidoyer.</figcaption>
+                    <figcaption><a href="#fullfig6"><i class="far fa-eye"></i></a><strong>Citizens Of Tomorrow</strong>
+                        <br>Un plaidoyer aux traits de simulation web.</figcaption>
                 </figure>
             </li>
             <li class="post" data-category="corp-proj crea-proj">
                 <figure>
                     <img src="images/portfolio/07.jpg" alt="">
-                    <figcaption><i class="far fa-eye"></i><strong>Nerf-Soft</strong> <br>L'encyclopédie des scénarios de jeux des (grands) enfants.</figcaption>
+                    <figcaption><a href="#fullfig7"><i class="far fa-eye"></i></a><strong>Nerf-Soft</strong>
+                        <br>L'encyclopédie des scénarios de jeu des (grands) enfants.</figcaption>
                 </figure>
             </li>
             <li class="post" data-category="port-proj">
                 <figure data-projects="all-projects portfolio-projects">
                     <img src="images/portfolio/08.jpg" alt="">
-                    <figcaption><i class="far fa-eye"></i><strong>Ranger Malin</strong> <br>Une boutique en ligne pour tous ces petits objets du quotidien.</figcaption>
+                    <figcaption><a href="#fullfig6"><i class="far fa-eye"></i></a><strong>Ranger Futé</strong> <br>Une
+                        boutique en ligne pour tous ces petits objets pratiques du quotidien.</figcaption>
                 </figure>
             </li>
         </ol>
+        <a href="#_" class="lightbox" id="fullfig1"><img src="images/portfolio/01.jpg" alt=""></a>
+        <a href="#_" class="lightbox" id="fullfig2"><img src="images/portfolio/02.jpg" alt=""></a>
+        <a href="#_" class="lightbox" id="fullfig3"><img src="images/portfolio/03.jpg" alt=""></a>
+        <a href="#_" class="lightbox" id="fullfig4"><img src="images/portfolio/04.jpg" alt=""></a>
+        <a href="#_" class="lightbox" id="fullfig5"><img src="images/portfolio/05.jpg" alt=""></a>
+        <a href="#_" class="lightbox" id="fullfig6"><img src="images/portfolio/06.jpg" alt=""></a>
+        <a href="#_" class="lightbox" id="fullfig7"><img src="images/portfolio/07.jpg" alt=""></a>
+        <a href="#_" class="lightbox" id="fullfig8"><img src="images/portfolio/08.jpg" alt=""></a>
     </section>
 
-
     <!-- Section 4 - Formulaire Contact -->
+
     <div id="contact-top"></div>
     <section id="contact">
-
         <div class="contact-info">
             <h3>Contact Info</h3>
             <div class="contact-text">
@@ -189,7 +193,6 @@
                     25 Rue d'Hauteville 75010 Paris <br>
                     <abbr title="Téléphone">Tel :</abbr> 01 02 03 04 05</p>
             </div>
-
             <form class="contact-form" method="post">
                 <div>
                     <label for="name"></label>
@@ -207,15 +210,11 @@
                     <label for="message"></label>
                     <textarea name="message" id="message" placeholder="Message" rows="8"></textarea>
                 </div>
-
             </form>
             <p><a href="#contact-top">Envoyer le message</a></p>
-
         </div>
-
         <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5248.4447173219305!2d2.3472077776763935!3d48.873037500268794!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x30a290491097f07f!2sWebAgency!5e0!3m2!1sfr!2sfr!4v1572764133325!5m2!1sfr!2sfr"></iframe>
-
     </section>
 
 </body>

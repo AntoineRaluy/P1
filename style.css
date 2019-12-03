@@ -27,18 +27,18 @@ footer, header, hgroup, menu, nav, section {
 }
 
 body {
-	line-height: 1;
+    line-height: 1;
 }
 
 ol, ul {
-	list-style: none;
+    list-style: none;
 }
 
 /* ----- Border box Reset ----- */
 
 *, *:before, *:after {
     box-sizing: border-box;
-  }
+}
 
 /* ----- Global Rules ----- */
 
@@ -50,20 +50,21 @@ ol, ul {
 
 /* ----- Font Settings ----- */
 
-html {    /* 1rem = 10px */
+html {
+    /* 1rem = 10px */
     font-size: 62.5%;
     font-family: 'Roboto', sans-serif;
     color: #65696e;
-  }
+}
 
 body {
     font-size: 1.35rem;
     line-height: 1.6;
-  }
+}
 
 h1 {
     font-size: 3.6rem;
-  }
+}
 
 h2 {
     text-align: center;
@@ -71,13 +72,13 @@ h2 {
     font-weight: 900;
     color: black;
     padding-top: 1.5rem;
-  }
+}
 
 h3 {
     font-size: 2.5rem;
     font-weight: 700;
     color: black;
-  }
+}
 
 h2, .slogan h1 {
     text-transform: uppercase;
@@ -89,8 +90,7 @@ h2, .slogan h1 {
     margin: 0 auto;
 }
 
-
-  /* ----- Misc. Rules ----- */
+/* ----- Misc. Rules ----- */
 
 #home, #services, #portfolio, #contact {
     min-height: var(--section-height);
@@ -102,18 +102,17 @@ h2, .slogan h1 {
     top: calc(-1 * var(--header-height));
     visibility: hidden;
 }
-  
+
 img, iframe {
-      width: 100%;
-  }
+    width: 100%;
+}
 
 strong {
     font-weight: 700;
     font-size: 1.5rem;
 }
 
-
-  /* ----- Header ----- */
+/* ----- Header ----- */
 
 header {
     position: fixed;
@@ -145,16 +144,17 @@ header {
 
 .menu label {
     padding: 0 1rem;
-  }
+}
 
-.menu label:hover, .menu input[type="radio"]:checked + label {
+.menu label:hover,
+.menu input[type="radio"]:checked+label {
     padding-top: 3.5rem;
     border-top: solid 4px var(--main-blue);
     cursor: pointer;
     color: black;
 }
 
-  /* ----- S1 - Homepage ----- */ 
+/* ----- S1 - Homepage ----- */
 
 #home input[type="radio"] {
     display: none;
@@ -185,11 +185,11 @@ header {
     width: 100%;
 }
 
-#slide1:checked ~ #slider-text .slides-images {
+#slide1:checked~#slider-text .slides-images {
     margin-left: 0;
 }
 
-#slide2:checked ~ #slider-text .slides-images {
+#slide2:checked~#slider-text .slides-images {
     margin-left: -100%;
 }
 
@@ -206,7 +206,8 @@ header {
     z-index: 2;
 }
 
-#slider-commands .fa-chevron-left:hover, #slider-commands .fa-chevron-right:hover {
+#slider-commands .fa-chevron-left:hover,
+#slider-commands .fa-chevron-right:hover {
     cursor: pointer;
     color: white;
 }
@@ -279,7 +280,8 @@ header {
     z-index: 2;
 }
 
-.edge-border-blue, .edge-border-blue-rev {
+.edge-border-blue,
+.edge-border-blue-rev {
     position: absolute;
     bottom: 6px;
     height: calc(100% + var(--header-height));
@@ -296,26 +298,28 @@ header {
 }
 
 @keyframes progress {
-    from { 
+    from {
         width: 0%;
-     }
-    to   {
+    }
+
+    to {
         width: 100%;
     }
-  }
+}
 
 @keyframes progress-rev {
-    from { 
+    from {
         margin-left: 100%;
         width: 0%;
-     }
-    to   {
+    }
+
+    to {
         margin-left: 0%;
         width: 100%;
     }
-  }
+}
 
-  /* ----- S2 - Services ----- */
+/* ----- S2 - Services ----- */
 
 .subdot {
     position: relative;
@@ -372,7 +376,9 @@ header {
     height: 65.6px;
 }
 
-.serv-details .fa-chart-line, .serv-details .fa-cubes, .serv-details .fa-chart-pie {
+.serv-details .fa-chart-line,
+.serv-details .fa-cubes,
+.serv-details .fa-chart-pie {
     color: var(--main-blue);
     font-size: 2.8rem;
     padding: 1.7rem;
@@ -414,12 +420,12 @@ header {
 .filters {
     text-align: center;
     margin: 7rem 0;
-  }
-  
+}
+
 .filters li {
     display: inline;
-  }
-  
+}
+
 .filters label {
     color: inherit;
     text-decoration: none;
@@ -427,16 +433,16 @@ header {
     padding: 1.2rem 1.5rem 1rem 1.5rem;
     background: #e5e5e5;
     border-bottom: solid 3px transparent;
-  }
+}
 
 .filters .left {
     border-radius: 3px 0 0 3px;
 }
 
 .filters .right {
-    border-radius: 0 3px 3px 0; 
+    border-radius: 0 3px 3px 0;
 }
-  
+
 .filters label:hover {
     position: relative;
     background: var(--main-blue);
@@ -444,10 +450,10 @@ header {
     font-weight: 500;
     border-bottom: solid 3px #468cad;
     cursor: pointer;
-  }
+}
 
 .filters label:hover:after {
-    content:"";
+    content: "";
     position: absolute;
     top: 100%;
     left: 50%;
@@ -457,18 +463,18 @@ header {
     border-right: solid 10px transparent;
 }
 
-  .posts {
+.projects {
     margin: 0 10%;
     display: grid;
     grid-gap: 2.8rem 3.5rem;
     grid-template-columns: repeat(4, 1fr);
-  }
-  
-  .posts figure {
-      position: relative;
-  }
+}
 
- .posts figcaption {
+.projects figure {
+    position: relative;
+}
+
+.projects figcaption {
     position: absolute;
     display: none;
     width: 100%;
@@ -480,17 +486,17 @@ header {
     padding: 1rem;
 }
 
-.posts figcaption a {
+.projects figcaption a {
     text-decoration: none;
     color: white;
 }
 
-.posts .post:hover figcaption {
+.projects .post:hover figcaption {
     display: block;
     z-index: 2;
 }
 
-.posts .fa-eye {
+.projects .fa-eye {
     position: absolute;
     top: -2rem;
     right: 1rem;
@@ -500,23 +506,23 @@ header {
     border: solid 2px white;
     border-radius: 100%;
 }
-  
-  [value="all-proj"]:checked ~ .filters [for="all-proj"],
-  [value="crea-proj"]:checked ~ .filters [for="crea-proj"],
-  [value="corp-proj"]:checked ~ .filters [for="corp-proj"],
-  [value="port-proj"]:checked ~ .filters [for="port-proj"] {
+
+[value="all-proj"]:checked~.filters [for="all-proj"],
+[value="crea-proj"]:checked~.filters [for="crea-proj"],
+[value="corp-proj"]:checked~.filters [for="corp-proj"],
+[value="port-proj"]:checked~.filters [for="port-proj"] {
     position: relative;
     background: var(--main-blue);
     color: white;
     font-weight: 500;
     border-bottom: solid 3px #468cad;
-  }
+}
 
-  [value="all-proj"]:checked ~ .filters [for="all-proj"]:after,
-  [value="crea-proj"]:checked ~ .filters [for="crea-proj"]:after,
-  [value="corp-proj"]:checked ~ .filters [for="corp-proj"]:after,
-  [value="port-proj"]:checked ~ .filters [for="port-proj"]:after  {
-    content:"";
+[value="all-proj"]:checked~.filters [for="all-proj"]:after,
+[value="crea-proj"]:checked~.filters [for="crea-proj"]:after,
+[value="corp-proj"]:checked~.filters [for="corp-proj"]:after,
+[value="port-proj"]:checked~.filters [for="port-proj"]:after {
+    content: "";
     position: absolute;
     top: 100%;
     left: 50%;
@@ -524,17 +530,40 @@ header {
     border-top: solid 10px #468cad;
     border-left: solid 10px transparent;
     border-right: solid 10px transparent;
-  }
-  
-  [value="all-proj"]:checked ~ .posts [data-category] {
+}
+
+[value="all-proj"]:checked~.projects [data-category] {
     display: block;
-  }
-  
-  [value="crea-proj"]:checked ~ .posts .post:not([data-category~="crea-proj"]),
-  [value="corp-proj"]:checked ~ .posts .post:not([data-category~="corp-proj"]),
-  [value="port-proj"]:checked ~ .posts .post:not([data-category~="port-proj"]) {
+}
+
+[value="crea-proj"]:checked~.projects .post:not([data-category~="crea-proj"]),
+[value="corp-proj"]:checked~.projects .post:not([data-category~="corp-proj"]),
+[value="port-proj"]:checked~.projects .post:not([data-category~="port-proj"]) {
     display: none;
-  }
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.lightbox img {
+    width: initial;
+    height: initial;
+    margin-top: 10%;
+}
+
+.lightbox:target {
+    outline: none;
+    display: block;
+}
 
 /* ----- S4 - Contact ----- */
 
@@ -574,11 +603,8 @@ header {
     font-size: 1.4rem;
 }
 
-.contact-text abbr {
-    
-}
-
-.contact-form input, .contact-form textarea {
+.contact-form input,
+.contact-form textarea {
     width: 100%;
     font-family: inherit;
     color: inherit;
@@ -611,8 +637,7 @@ header {
 }
 
 
-  /* ----- Media Queries ----- */
-
+/* ----- Media Queries ----- */
 
 @media all and (max-width: 1150px) {
     :root {
@@ -622,7 +647,7 @@ header {
 
     header {
         padding: 0.5rem 7rem;
-    }  
+    }
 
 }
 
@@ -635,12 +660,13 @@ header {
     h1 {
         font-size: 3.2rem;
     }
-    
+
     .logo {
-        height: 75%;        
+        height: 75%;
     }
 
-    .menu label:hover, .menu input[type="radio"]:checked + label {
+    .menu label:hover,
+    .menu input[type="radio"]:checked+label {
         padding-top: 1.8rem;
     }
 
@@ -654,9 +680,6 @@ header {
         left: 33%;
     }
 
-    .serv-body {
-    
-    }
 }
 
 @media all and (max-width: 320px) {
