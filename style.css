@@ -639,26 +639,55 @@ header {
 
 /* ----- Media Queries ----- */
 
-@media all and (max-width: 1150px) {
+/* ----- MQ1 - Desktop  ----- */
+
+@media all and (max-width: 1024px) {
     :root {
         --header-height: 8vh;
-        --section-height: 43vh;
+        --section-height: 100%;
     }
 
     header {
         padding: 0.5rem 7rem;
     }
 
-}
-
-@media all and (max-width: 768px) {
-    :root {
-        --header-height: 7vh;
-        --section-height: 31vh;
+    .menu label:hover,
+    .menu input[type="radio"]:checked+label {
+    padding-top: 1.9rem;
     }
 
-    h1 {
-        font-size: 3.2rem;
+    .services-bg {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .serv-section {
+        padding-top: 0;
+    }
+    
+    .serv-details {
+        margin: 3.8rem auto;
+        margin-right: 10%;
+        max-width: calc((100vw / 2) - 10%);
+    }    
+
+    .filters {
+        margin: 4rem 0;
+    }
+
+    .projects {
+        margin: 0 8%;
+        grid-gap: 1rem 2rem;
+    }
+}
+
+
+/* ----- MQ2 - Tablet  ----- */
+
+@media all and (max-width: 800px) {
+    :root {
+        --header-height: 4vh;
+        --section-height: 100%;
     }
 
     .logo {
@@ -667,7 +696,7 @@ header {
 
     .menu label:hover,
     .menu input[type="radio"]:checked+label {
-        padding-top: 1.8rem;
+        padding-top: 1.5rem;
     }
 
     .slogan {
@@ -676,13 +705,189 @@ header {
         max-width: calc((100vw /2));
     }
 
+    .slogan h1 {
+        font-size: 3.2rem;
+    }
+
     .slogan a {
         left: 33%;
     }
 
+    .serv-body {
+        margin: 2rem auto;
+    }
+    
+    .serv-details {
+        margin: 2rem auto;
+        margin-right: 5%;
+        max-width: calc((100vw / 2) - 5%);
+    }
+
+    .serv-details .icon {
+        height: 54.6px;
+    }
+
+    .serv-details .fa-chart-line,
+    .serv-details .fa-cubes,
+    .serv-details .fa-chart-pie {
+        font-size: 2.3rem;
+        padding: 1.5rem;
+    }
+
+    .projects {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 100%;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .projects figure {
+        width: 200px;
+        padding: 0;
+        margin: 0;
+        }
+
+    .lightbox img {
+        margin-top: 33%;
+    }   
+
+    #contact iframe {
+        height: 60vh;
+    }
+
+    .contact-info {
+        right: 5rem;
+    }
 }
 
-@media all and (max-width: 320px) {
+@media all and (max-width: 768px) {
+
+    .menu label:hover,
+    .menu input[type="radio"]:checked+label {
+        padding-top: 1rem;
+    }
+
+    .slogan h1 {
+        font-size: 3rem;
+    }
+
+    .slogan {
+        top: 40%;
+        left: 5%;
+        max-width: calc((100vw /2) - 3%);
+    }
+
+}
+
+@media all and (max-width: 600px) {
+    h2 {
+        font-size: 4rem;
+        font-weight: 900;
+    }
+
+    .sub {
+        max-width: calc((100vw / 2));
+    }
+
+    #slider-commands {
+        font-size: 1.5rem;
+    }
+    
+    #slider-commands .fas {
+        height: 50px;
+        width: 25px;
+    }
+    
+    #slider-commands .fa-chevron-left {
+        border-radius: 0 25px 25px 0;
+        padding: 1.7rem 0 0 0.4rem;
+    }
+    
+    #slider-commands .fa-chevron-right {
+        border-radius: 25px 0 0 25px;
+        padding: 1.7rem 0 0 1.3rem;
+    }
+
+    .slogan {
+        top: 55%;
+        left: 8%;
+        max-width: calc((100vw /2));
+    }
+
+    .slogan h1 {
+        font-size: 2.8rem;
+        font-weight: 700;
+    }
+
+    .slogan p {
+        display: none;
+    }
+
+    #services {
+        padding-bottom: 2rem;
+    }
+
+    .serv-body {
+        display: inherit;
+    }
+    
+    .services-bg {
+        display: block;
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .serv-details {
+        margin: 2rem auto;
+        max-width: 80vw;
+    }
+
+    #portfolio {
+        padding-bottom: 3rem;
+    }
+
+    .lightbox img {
+        width: 75%;
+        margin-top: 40%;
+    }
+
+    #contact {
+        display: flex;
+    }
+
+    #contact iframe {
+        height: inherit;
+        mix-blend-mode: soft-light;
+        width: 50vw;
+       }
+
+    .contact-info {
+        position: static;
+        top: 0;
+        transform: translate(0, 0);
+        mix-blend-mode: unset;
+        width: 50vw;
+        }
+}
+
+/* ----- MQ3 - Smartphones  ----- */
+
+@media all and (max-width: 400x) {
+    :root {
+        --header-height: 5vh;
+        --section-height: 20vh;
+    }
+}
+
+@media all and (max-width: 375px) {
+    :root {
+        --header-height: 5vh;
+        --section-height: 20vh;
+    }
+}
+
+@media all and (max-width: 360x) {
     :root {
         --header-height: 5vh;
         --section-height: 20vh;
