@@ -128,6 +128,10 @@ header {
     z-index: 10;
 }
 
+header input {
+    display: none;
+}
+
 .logo {
     width: initial;
     height: 100%;
@@ -136,10 +140,6 @@ header {
 
 .menu {
     display: inline;
-}
-
-.menu input[type="radio"] {
-    display: none;
 }
 
 .menu label {
@@ -285,21 +285,22 @@ header {
     position: absolute;
     bottom: 6px;
     height: calc(100% + var(--header-height));
+    width: 14%;
     border-bottom: solid 4px var(--main-blue);
     z-index: 1;
 }
 
 #bluebar:target {
-    animation: 2.5s linear progress forwards;
+    animation: 1.8s linear progress forwards;
 }
 
 #bluebar-rev:target {
-    animation: 2.5s linear progress-rev forwards;
+    animation: 1.8s linear progress-rev forwards;
 }
 
 @keyframes progress {
     from {
-        width: 0%;
+        width: 14%;
     }
 
     to {
@@ -309,13 +310,13 @@ header {
 
 @keyframes progress-rev {
     from {
-        margin-left: 100%;
-        width: 0%;
+        margin-left: 0%;
+        width: 100%;
     }
 
     to {
         margin-left: 0%;
-        width: 100%;
+        width: 14%;
     }
 }
 
@@ -687,7 +688,6 @@ header {
 @media all and (max-width: 800px) {
     :root {
         --header-height: 4vh;
-        --section-height: 100%;
     }
 
     .logo {
@@ -701,16 +701,43 @@ header {
 
     .slogan {
         top: 45%;
-        left: 8%;
-        max-width: calc((100vw /2));
+        left: 7%;
+        max-width: calc((100vw /2) - 4%);
     }
 
     .slogan h1 {
-        font-size: 3.2rem;
+        font-size: 3.1rem;
     }
 
     .slogan a {
         left: 33%;
+    }
+
+    .edge-border-blue,
+    .edge-border-blue-rev {
+        width: 7%;
+    }
+
+    @keyframes progress {
+        from {
+            width: 7%;
+        }
+    
+        to {
+            width: 100%;
+        }
+    }
+    
+    @keyframes progress-rev {
+        from {
+            margin-left: 0%;
+            width: 100%;
+        }
+    
+        to {
+            margin-left: 0%;
+            width: 7%;
+        }
     }
 
     .serv-body {
@@ -778,12 +805,38 @@ header {
         max-width: calc((100vw /2) - 3%);
     }
 
+    .edge-border-blue,
+    .edge-border-blue-rev {
+        width: 5%;
+    }
+
+    @keyframes progress {
+        from {
+            width: 5%;
+        }
+    
+        to {
+            width: 100%;
+        }
+    }
+    
+    @keyframes progress-rev {
+        from {
+            margin-left: 0%;
+            width: 100%;
+        }
+    
+        to {
+            margin-left: 0%;
+            width: 5%;
+        }
+    }
+
 }
 
 @media all and (max-width: 600px) {
     h2 {
         font-size: 4rem;
-        font-weight: 900;
     }
 
     .sub {
@@ -822,6 +875,33 @@ header {
 
     .slogan p {
         display: none;
+    }
+
+    .edge-border-blue,
+    .edge-border-blue-rev {
+        width: 8%;
+    }
+
+    @keyframes progress {
+        from {
+            width: 8%;
+        }
+    
+        to {
+            width: 100%;
+        }
+    }
+    
+    @keyframes progress-rev {
+        from {
+            margin-left: 0%;
+            width: 100%;
+        }
+    
+        to {
+            margin-left: 0%;
+            width: 8%;
+        }
     }
 
     #services {
@@ -865,19 +945,167 @@ header {
     .contact-info {
         position: static;
         top: 0;
+        right: 0;
         transform: translate(0, 0);
         mix-blend-mode: unset;
         width: 50vw;
+        background: rgba(255, 255, 255, 0.85);
         }
 }
 
 /* ----- MQ3 - Smartphones  ----- */
-
-@media all and (max-width: 400x) {
-    :root {
-        --header-height: 5vh;
-        --section-height: 20vh;
+@media all and (min-width: 401px) {
+    header .fas, .text-logo {
+        display: none;
     }
+
+}
+
+@media all and (max-width: 400px) {
+    :root {
+        --header-height: 6vh;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+
+    .sub {
+        max-width: 100vw;
+    }
+
+    #home-top, #services-top, #portfolio-top, #contact-top {
+        display: block;
+        position: relative;
+        top: calc(-1 * var(--header-height));
+        visibility: hidden;
+    }
+
+    header {
+        padding: 0;
+        background: transparent; 
+    }
+
+    header .fas {
+        color: inherit;
+        font-size: 1.8rem;
+        height: var(--header-height);
+        background: white;
+        padding: 1rem;
+    }
+
+    header .fa-bars {
+        border-bottom: solid 1px transparent;
+        border-radius: 0 0 3px 0;
+    }
+
+    header .fas:hover {
+        cursor: pointer;
+        color: var(--main-blue);
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .menu {
+        margin: 0 auto;
+        opacity: 1;
+        width: 100%;
+        height: var(--header-height);
+        background: white;
+        padding: 1rem 0 1rem 5rem;
+        transition: opacity 1s ease;
+    }
+
+    #toggle-menu:checked ~ label span:last-child {
+        display:none;
+    }
+    
+    #toggle-menu:not(:checked) ~ label span:first-child {
+       display:none;
+    }
+
+    #toggle-menu:not(:checked) ~ .menu {
+        opacity: 0;
+    }
+
+    .text-logo {
+        position: absolute;
+        top: -1.5%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 50%;
+   }
+
+    .slogan {
+        display: none;
+    }
+
+    .edge-border-blue,
+    .edge-border-blue-rev {
+        width: 12%;
+    }
+
+    @keyframes progress {
+        from {
+            width: 12%;
+        }
+    
+        to {
+            width: 100%;
+        }
+    }
+    
+    @keyframes progress-rev {
+        from {
+            margin-left: 0%;
+            width: 100%;
+        }
+    
+        to {
+            margin-left: 0%;
+            width: 12%;
+        }
+    }
+
+    .subdot .fa-circle {
+        font-size: 1.2rem;
+    }
+
+    .serv-details {
+        margin: 2rem auto;
+        max-width: 90vw;
+    }
+
+    .projects figure {
+        width: 300px;
+        }
+
+    .lightbox img {
+        width: 90%;
+        margin-top: 40%;
+    }
+
+    #contact {
+        flex-direction: column;
+    }
+
+    .contact-info {
+        width: 100%;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    #contact iframe {
+        height: 50vh;
+        width: 100%;
+       }
+
 }
 
 @media all and (max-width: 375px) {
@@ -887,7 +1115,7 @@ header {
     }
 }
 
-@media all and (max-width: 360x) {
+@media all and (max-width: 360px) {
     :root {
         --header-height: 5vh;
         --section-height: 20vh;
