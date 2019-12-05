@@ -641,6 +641,11 @@ header input {
 /* ----- Media Queries ----- */
 
 /* ----- MQ1 - Desktop  ----- */
+@media all and (min-width: 1600px) {
+    body {
+        font-size: 1.6rem;
+    }
+}
 
 @media all and (max-width: 1024px) {
     :root {
@@ -1024,15 +1029,19 @@ header input {
     }
 
     #toggle-menu:checked ~ label span:last-child {
-        display:none;
+        display: none;
     }
     
     #toggle-menu:not(:checked) ~ label span:first-child {
-       display:none;
+       display: none;
     }
 
     #toggle-menu:not(:checked) ~ .menu {
         opacity: 0;
+    }
+
+    #toggle-menu:not(:checked) ~ .menu label {
+        pointer-events: none;
     }
 
     .text-logo {
@@ -1103,7 +1112,7 @@ header input {
     }
 
     #contact iframe {
-        height: 50vh;
+        height: 75vh;
         width: 100%;
        }
 
@@ -1150,9 +1159,4 @@ header input {
     .projects figure {
         width: 250px;
         }
-
-    #contact iframe {
-        height: 60vh;
-        width: 100%;
-       }
 }
