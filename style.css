@@ -954,8 +954,8 @@ header input {
 }
 
 /* ----- MQ3 - Smartphones  ----- */
-@media all and (min-width: 401px) {
-    header .fas, .text-logo {
+@media all and (min-width: 400.1px) {
+    header .fas, .text-logo, .slide-img2 {
         display: none;
     }
 
@@ -974,15 +974,12 @@ header input {
         font-size: 2rem;
     }
 
-    .sub {
-        max-width: 100vw;
+    .slide-img1 {
+        display: none;
     }
 
-    #home-top, #services-top, #portfolio-top, #contact-top {
-        display: block;
-        position: relative;
-        top: calc(-1 * var(--header-height));
-        visibility: hidden;
+    .sub {
+        max-width: 95vw;
     }
 
     header {
@@ -1109,15 +1106,49 @@ header input {
 }
 
 @media all and (max-width: 375px) {
-    :root {
-        --header-height: 5vh;
-        --section-height: 20vh;
+    .menu {
+       padding-left: 2rem;      
+    }
+
+    .text-logo {
+        padding-top: 0.2rem;
+        top: -2%;
     }
 }
 
-@media all and (max-width: 360px) {
-    :root {
-        --header-height: 5vh;
-        --section-height: 20vh;
+@media all and (max-width: 320px) {
+    .text-logo {
+        padding-top: 0;
     }
+
+    header .fas {
+        padding: 0.5rem;
+    }
+
+    .menu {
+        padding: 0.5rem;
+        padding-left: 2.5rem;
+    }
+
+    .menu label {
+        padding: 0.5rem;
+    }
+
+    .menu label:hover,
+    .menu input[type="radio"]:checked+label {
+        background: var(--main-blue);
+    }
+
+    .filters label {
+        padding: 0.7rem 0.7rem 0.5rem 0.7rem;
+    }
+
+    .projects figure {
+        width: 250px;
+        }
+
+    #contact iframe {
+        height: 60vh;
+        width: 100%;
+       }
 }
