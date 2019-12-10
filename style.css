@@ -51,8 +51,7 @@ ol, ul {
 /* ----- Font Settings ----- */
 
 html {
-    /* 1rem = 10px */
-    font-size: 62.5%;
+    font-size: 62.5%;   /* 1rem = 10px */
     font-family: 'Roboto', sans-serif;
     color: #65696e;
 }
@@ -93,9 +92,10 @@ h2, .slogan h1 {
 /* ----- Misc. Rules ----- */
 
 #home, #services, #portfolio, #contact {
-    min-height: var(--section-height);
+    min-height: var(--section-height); 
 }
 
+        /* creates anchor above the section with same height as the header */
 #home-top, #services-top, #portfolio-top, #contact-top {
     display: block;
     position: relative;
@@ -128,7 +128,8 @@ header {
     z-index: 10;
 }
 
-header input {
+        
+header input { /* hides checkbox */
     display: none;
 }
 
@@ -156,7 +157,8 @@ header input {
 
 /* ----- S1 - Homepage ----- */
 
-#home input[type="radio"] {
+        
+#home input[type="radio"] { /* hides radio buttons */
     display: none;
 }
 
@@ -165,6 +167,7 @@ header input {
     margin-top: var(--header-height);
 }
 
+        /* slider configuration - start */
 #inner-slider {
     width: 100%;
     overflow: hidden;
@@ -181,7 +184,7 @@ header input {
     float: left;
 }
 
-.slides-images article img {
+.slides-images img {
     width: 100%;
 }
 
@@ -192,6 +195,7 @@ header input {
 #slide2:checked~#slider-text .slides-images {
     margin-left: -100%;
 }
+        /* slider configuration - end */
 
 #slider-commands {
     position: absolute;
@@ -232,7 +236,7 @@ header input {
 
 .slogan {
     position: absolute;
-    top: 49%;
+    top: 50%;
     transform: translate(0, -50%);
     left: 14%;
     max-width: calc((100vw /2) - 14%);
@@ -266,7 +270,8 @@ header input {
     border-bottom: solid 3px #4494bb;
 }
 
-.slogan a:active {
+        
+.slogan a:active { /* pushed button effect */
     top: 3px;
     border-bottom: none;
 }
@@ -280,6 +285,7 @@ header input {
     z-index: 2;
 }
 
+        /* animated blue border config - start */
 .edge-border-blue,
 .edge-border-blue-rev {
     position: absolute;
@@ -298,7 +304,7 @@ header input {
     animation: 1.8s linear progress-rev forwards;
 }
 
-@keyframes progress {
+@keyframes progress { /* left to rigth - full blue */
     from {
         width: 14%;
     }
@@ -308,7 +314,7 @@ header input {
     }
 }
 
-@keyframes progress-rev {
+@keyframes progress-rev { /* right to left - removing blue */
     from {
         margin-left: 0%;
         width: 100%;
@@ -319,6 +325,7 @@ header input {
         width: 14%;
     }
 }
+        /* animated blue border config - end */
 
 /* ----- S2 - Services ----- */
 
@@ -336,7 +343,8 @@ header input {
     border-radius: 100%;
 }
 
-.subdot .fa-circle:after {
+        
+.subdot .fa-circle:after { /* line under blue dot */
     content: "";
     position: absolute;
     top: 50%;
@@ -414,7 +422,8 @@ header input {
     padding-bottom: 5rem;
 }
 
-#portfolio input[type="radio"] {
+        
+#portfolio input[type="radio"] { /* hides radio buttons */
     display: none;
 }
 
@@ -436,11 +445,11 @@ header input {
     border-bottom: solid 3px transparent;
 }
 
-.filters .left {
+.filters .left { /* rounded border for first element */
     border-radius: 3px 0 0 3px;
 }
 
-.filters .right {
+.filters .right { /* rounded border for last element */
     border-radius: 0 3px 3px 0;
 }
 
@@ -453,7 +462,7 @@ header input {
     cursor: pointer;
 }
 
-.filters label:hover:after {
+.filters label:hover:after { /* blue triangle under label */
     content: "";
     position: absolute;
     top: 100%;
@@ -508,6 +517,7 @@ header input {
     border-radius: 100%;
 }
 
+        /* keeps style on with screening fucntion active */
 [value="all-proj"]:checked~.filters [for="all-proj"],
 [value="crea-proj"]:checked~.filters [for="crea-proj"],
 [value="corp-proj"]:checked~.filters [for="corp-proj"],
@@ -533,6 +543,7 @@ header input {
     border-right: solid 10px transparent;
 }
 
+        /* screening function config - start */
 [value="all-proj"]:checked~.projects [data-category] {
     display: block;
 }
@@ -542,6 +553,7 @@ header input {
 [value="port-proj"]:checked~.projects .post:not([data-category~="port-proj"]) {
     display: none;
 }
+        /* screening function config - end */
 
 .lightbox {
     display: none;
@@ -641,7 +653,7 @@ header input {
 /* ----- Media Queries ----- */
 
 /* ----- MQ1 - Desktop  ----- */
-@media all and (min-width: 1600px) {
+@media all and (min-width: 1600px) { /* bigger font size for larger screens */
     body {
         font-size: 1.6rem;
     }
@@ -963,7 +975,7 @@ header input {
 }
 
 /* ----- MQ3 - Smartphones  ----- */
-@media all and (min-width: 415.1px) {
+@media all and (min-width: 415.1px) { /* hides those elements for larger screen sizes */
     header .fas, .text-logo, .slide-img2 {
         display: none;
     }
@@ -996,6 +1008,7 @@ header input {
         background: transparent; 
     }
 
+        /* minimized toggled menu config - start */
     header .fas {
         color: inherit;
         font-size: 1.8rem;
@@ -1014,7 +1027,7 @@ header input {
         color: var(--main-blue);
     }
 
-    .logo {
+    .logo { /* hides main logo */
         display: none;
     }
 
@@ -1028,29 +1041,30 @@ header input {
         transition: opacity 1s ease;
     }
 
-    #toggle-menu:checked ~ label span:last-child {
+    #toggle-menu:checked ~ label span:last-child { /* hides 3-bars menu button */
         display: none;
     }
     
-    #toggle-menu:not(:checked) ~ label span:first-child {
+    #toggle-menu:not(:checked) ~ label span:first-child { /* hides close button */
        display: none;
     }
 
-    #toggle-menu:not(:checked) ~ .menu {
+    #toggle-menu:not(:checked) ~ .menu { /* hides menu */
         opacity: 0;
     }
 
-    #toggle-menu:not(:checked) ~ .menu label {
+    #toggle-menu:not(:checked) ~ .menu label { /* prevents hidden labels from being clicked */
         pointer-events: none;
     }
 
-    .text-logo {
+    .text-logo { /* simplified logo at head of page */
         position: absolute;
         top: -1.5%;
         left: 50%;
         transform: translate(-50%, 0);
         width: 50%;
    }
+        /* minimized toggled menu config - end */
 
     .slogan {
         display: none;
@@ -1148,7 +1162,7 @@ header input {
     }
 
     .menu label:hover,
-    .menu input[type="radio"]:checked+label {
+    .menu input[type="radio"]:checked+label { /* background instead of overline */
         background: var(--main-blue);
     }
 
